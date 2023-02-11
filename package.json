@@ -1,0 +1,26 @@
+{
+  "name": "cuadricula-stickers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jefferson-R/cuadricula-stickers.git"
+  },
+  "keywords": [],
+  "author": "Jefferson Ramos <radsjefferson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jefferson-R/cuadricula-stickers/issues"
+  },
+  "homepage": "https://github.com/Jefferson-R/cuadricula-stickers#readme",
+  "devDependencies": {
+    "sass": "^1.58.0",
+    "vite": "^4.1.1"
+  }
+}

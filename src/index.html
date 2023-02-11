@@ -5,25 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stickers App</title>
-  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.scss">
 </head>
 <body>
   <div class="app">
 
-    <div class="topBar">
-      <h1>Cuadrícula de imágenes</h1>
-      <img src="" alt="">
-    </div>
+    <header class="topBar">
+      <h1>Metro de Stickers</h1>
+      <div class="topBar-buttons">
+        <button class="button sizeButton" id="sizeButton">Medida</button>
+        <button class="button addButton" id="addButton">Añadir stickers</button>
+      </div>
+    </header>
 
-    <div class="content">
+    <main class="content">
 
       <div class="sheet sheet-metter">
         <!-- Grid Images -->
       </div>
-      
-      <button class="addButton">Añadir imagen</button>
-    </div>
 
+      <div class="sizeModal sizeModalOut">
+        <button id="metterButton">Un metro</button>
+        <hr>
+        <button id="halfMetterButton">Medio Metro</button>
+      </div>
+
+    </main>
   </div>
+  <script src="./js/app.js" type="module"></script>
 </body>
 </html>
