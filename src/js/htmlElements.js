@@ -1,5 +1,5 @@
 export const sizeButton = document.querySelector('#sizeButton')
-export const metterButton = document.querySelector('#metterButton')
-export const halfMetterButton = document.querySelector('#halfMetterButton')
+export const meterButton = document.querySelector('#meterButton')
+export const halfMeterButton = document.querySelector('#halfMeterButton')
 export const sizeModal = document.querySelector('.sizeModal')
 

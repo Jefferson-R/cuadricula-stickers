@@ -1,6 +1,8 @@
+import path from 'path'
+
 module.exports = {
-  root: 'src',
+  root: path.resolve(__dirname, 'src'),
   build: {
-    outDir: 'dist'
+    outDir: path.resolve(__dirname, 'dist')
   }
 }
