@@ -1,4 +1,4 @@
-import { sizeModal, sheet, meterButton, halfMeterButton, title } from "./htmlElements"
+import { sizeModal, sheet, meterButton, halfMeterButton, title, restD } from "./htmlElements"
 
 export function sizeModalToggleClass() {
   sizeModal.classList.toggle('sizeModalIn')
@@ -12,6 +12,9 @@ export function meterSizeSheet() {
   sheet.classList.remove('sheet-halfmeter')
   sheet.classList.add('sheet-meter')
 
+  restD.classList.remove('rest-d--half')
+  restD.classList.add('rest-d--meter')
+
   title.innerHTML = 'Metro de Stickers'
 }
 
@@ -21,6 +24,9 @@ export function halfMeterSizeSheet() {
   }
   sheet.classList.remove('sheet-meter')
   sheet.classList.add('sheet-halfmeter')
+
+  restD.classList.remove('rest-d--meter')
+  restD.classList.add('rest-d--half')
 
   title.innerHTML = 'Medio Metro de Stickers'
 }

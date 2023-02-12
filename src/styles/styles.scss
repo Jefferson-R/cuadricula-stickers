@@ -25,6 +25,7 @@ $green: rgb(79, 255, 79);
 }
 
 // TOP BAR -----
+
 .topBar {
   width: 100%;
   height: auto;
@@ -76,28 +77,48 @@ $green: rgb(79, 255, 79);
 }
 
 // CONTENT -----
+
 .content {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 2.5%;
   position: relative;
 }
 
 .sheet {
   background-color: $white;
   z-index: 2;
+  display: grid;
   transition: all .75s;
 }
 .sheet-meter {
   height: 100%;
   aspect-ratio: 2/2;
+  grid-template: repeat(16, 6fr) 4fr / repeat(16, 6fr) 4fr;
 }
 .sheet-halfmeter {
   height: 50%;
   aspect-ratio: 2/1;
+  grid-template: repeat(8, 6fr) 2fr / repeat(16, 6fr) 4fr;
+}
+
+.rest-d {
+  grid-area: 1 / -2 / -1 / -1;
+  display: grid;
+}
+.rest-d--meter {
+  grid-template: repeat(16, 6fr) 4fr / 1fr;
+}
+.rest-d--half {
+  grid-template: repeat(8, 6fr) 2fr / 1fr;
+}
+.rest-a {
+  grid-area: -2 / 1 / -1 / -1;
+  display: grid;
+  grid-template: 1fr / repeat(16, 6fr) 4fr;
 }
 
 // MODALS -----
@@ -141,6 +162,66 @@ $green: rgb(79, 255, 79);
   opacity: 0%;
 }
 
+// -----
+.addModal {
+  position: absolute;
+  z-index: 3;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0 0 15px 2px rgba($black, .5);
+  transition: all .6s;
+
+  span {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  hr {
+    background-color: $black;
+    width: 80%;
+  }
+}
+
+.file-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+#files {
+  cursor: pointer;
+  font-weight: bold;
+  width: 60%;
+}
+#format {
+  text-align: center;
+  font-weight: bold;
+  
+  option {
+    font-weight: bold;
+  }
+}
+
+.addFilesButton {
+  background-color: $green;
+  color: $black;
+  box-shadow: 0 0 15px 2px rgba($green, .5);
+}
+
+.addModalIn {
+  display: flex;
+}
+.addModalOut {
+  transform: scale(0);
+  opacity: 0%;
+}
+
+// ANIMATIONS -----
 
 @keyframes press {
   50% {

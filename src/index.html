@@ -22,12 +22,31 @@
 
       <div class="sheet sheet-meter">
         <!-- Grid Images -->
+        <div class="rest-d rest-d--meter"></div>
+        <div class="rest-a"></div>
       </div>
 
       <div class="sizeModal sizeModalOut">
         <button id="meterButton">Un Metro</button>
         <hr>
         <button id="halfMeterButton">Medio Metro</button>
+      </div>
+
+      <div class="addModal addModalOut">
+        <span>Añadir Stickers</span>
+        <div class="file-section">
+          <input type="file" id="files" multiple>
+          <select name="formats" id="format">
+            <option value="1">1 : 1</option>
+            <option value="2">1 : 2 (H)</option>
+            <option value="3">2 : 1 (V)</option>
+            <option value="4">2 : 2</option>
+            <option value="5">Rest. (D)</option>
+            <option value="5">Rest. (A)</option>
+          </select>
+        </div>
+        <hr>
+        <button class="button addFilesButton" id="addFilesButton">Aceptar</button>
       </div>
 
     </main>
