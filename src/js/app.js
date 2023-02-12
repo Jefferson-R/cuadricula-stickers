@@ -1,6 +1,6 @@
-import { sizeButton, addButton } from "./htmlElements";
-import { sizeModalToggleClass } from "./size-modal";
-import { addModalToggleClass } from "./add-modal";
+import { sizeButton, addButton } from "./components/htmlElements";
+import { sizeModalToggleClass } from "./components/size-modal";
+import { addModalToggleClass } from "./components/add-modal";
 
 sizeButton.addEventListener('click', sizeModalToggleClass)
 addButton.addEventListener('click', addModalToggleClass)

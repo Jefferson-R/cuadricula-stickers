@@ -34,16 +34,27 @@
 
       <div class="addModal addModalOut">
         <span>Añadir Stickers</span>
-        <div class="file-section">
-          <input type="file" id="files" multiple>
-          <select name="formats" id="format">
-            <option value="1">1 : 1</option>
-            <option value="2">1 : 2 (H)</option>
-            <option value="3">2 : 1 (V)</option>
-            <option value="4">2 : 2</option>
-            <option value="5">Rest. (D)</option>
-            <option value="5">Rest. (A)</option>
+        <input type="file" id="files" multiple>
+        <div class="format-section">
+
+          <select name="type-image" id="type-image">
+            <option value="normal">Normal</option>
+            <option value="rest">Restante</option>
           </select>
+
+          <select name="normal-formats" id="formats">
+            <option value="1">1 : 1</option>
+            <option value="2">Largo H</option>
+            <option value="3">Largo V</option>
+            <option value="4" id="optional">2 : 2</option>
+          </select>
+
+          <select class="disable" name="rest-formats" id="rest-formats">
+            <option value="1">1 : 1</option>
+            <option value="2">Largo H</option>
+            <option value="3">Largo V</option>
+          </select>
+
         </div>
         <hr>
         <button class="button addFilesButton" id="addFilesButton">Aceptar</button>

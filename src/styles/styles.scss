@@ -24,6 +24,29 @@ $green: rgb(79, 255, 79);
   overflow: hidden;
 }
 
+// UTILS -----
+
+.button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 1em;
+  transition: all .5s;
+
+  &:active {
+    animation: press .25s;
+  }
+}
+
+.disable {
+  display: none;
+}
+
 // TOP BAR -----
 
 .topBar {
@@ -45,23 +68,6 @@ $green: rgb(79, 255, 79);
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-.button {
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 1em;
-  transition: all .5s;
-
-  &:active {
-    animation: press .25s;
-  }
 }
 
 .sizeButton {
@@ -188,22 +194,24 @@ $green: rgb(79, 255, 79);
     width: 80%;
   }
 }
-
-.file-section {
-  display: flex;
-  justify-content: space-evenly;
-}
 #files {
   cursor: pointer;
   font-weight: bold;
   width: 60%;
 }
-#format {
-  text-align: center;
-  font-weight: bold;
-  
-  option {
+
+.format-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  select {
+    text-align: center;
     font-weight: bold;
+    
+    option {
+      font-weight: bold;
+    }
   }
 }
 
