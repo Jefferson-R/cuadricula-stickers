@@ -20,3 +20,6 @@ export const typeImage = document.querySelector('#type-image')
 export const format = document.querySelector('#formats')
 export const optionalFormat = document.querySelectorAll('#formats #optional')
 export const addFilesButton = document.querySelector('#addFilesButton')
+
+// DOWNLOAD ACTION
+export const downloadButton = document.querySelector('.downloadButton')

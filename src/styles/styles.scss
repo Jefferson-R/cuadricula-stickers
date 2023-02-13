@@ -4,6 +4,7 @@
 $black: rgb(17, 21, 26);
 $white: white;
 $green: rgb(79, 255, 79);
+$blue: rgb(71, 151, 255);
 
 
 * {
@@ -80,6 +81,12 @@ $green: rgb(79, 255, 79);
   background-color: $green;
   color: $black;
   box-shadow: 0 0 15px 2px rgba($green, .5);
+}
+
+.downloadButton {
+  background-color: $blue;
+  color: $black;
+  box-shadow: 0 0 15px 2px rgba($blue, .5);
 }
 
 // CONTENT -----
