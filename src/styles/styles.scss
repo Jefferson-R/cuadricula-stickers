@@ -97,7 +97,11 @@ $green: rgb(79, 255, 79);
 .sheet {
   background-color: $white;
   z-index: 2;
+  max-height: 80vh;
   display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: 0px;
+  grid-auto-columns: 0px;
   transition: all .75s;
 }
 .sheet-meter {
@@ -112,19 +116,62 @@ $green: rgb(79, 255, 79);
 }
 
 .rest-d {
-  grid-area: 1 / -2 / -1 / -1;
+  grid-area: 1 / -2 / -2 / -1;
   display: grid;
+  grid-auto-rows: 0px;
+  grid-auto-columns: 0px;
 }
 .rest-d--meter {
-  grid-template: repeat(16, 6fr) 4fr / 1fr;
+  grid-template: repeat(16, 6fr) / 1fr;
 }
 .rest-d--half {
-  grid-template: repeat(8, 6fr) 2fr / 1fr;
+  grid-template: repeat(8, 6fr) / 1fr;
 }
 .rest-a {
-  grid-area: -2 / 1 / -1 / -1;
+  height: 100%;
+  width: 100%;
+  grid-area: -2 / 1 / -1 / -2;
   display: grid;
-  grid-template: 1fr / repeat(16, 6fr) 4fr;
+  grid-auto-rows: 0px;
+  grid-auto-columns: 0px;
+  grid-template: 1fr / repeat(16, 6fr);
+}
+
+.sheet-image1, .sheet-image2, .sheet-image3, .sheet-image4, .sheet-image1-d, .sheet-image3-d, .sheet-image1-a, .sheet-image2-a {
+  opacity: 0%;
+  width: 100%;
+  height: 100%;
+  animation: spawn 1s forwards;
+}
+.sheet-image1 {
+  aspect-ratio: 1 / 1;
+}
+.sheet-image1-d {
+  aspect-ratio: 4 / 6;
+}
+.sheet-image1-a {
+  aspect-ratio: 6 / 4;
+}
+.sheet-image2 {
+  aspect-ratio: 2 / 1;
+  grid-column: auto / span 2;
+}
+.sheet-image2-a {
+  aspect-ratio: 12 / 4;
+  grid-column: auto / span 2;
+}
+.sheet-image3 {
+  aspect-ratio: 1 / 2;
+  grid-row: auto / span 2;
+}
+.sheet-image3-d {
+  aspect-ratio: 4 / 12;
+  grid-row: auto / span 2;
+}
+.sheet-image4 {
+  aspect-ratio: 1 / 1;
+  grid-column: auto / span 2;
+  grid-row: auto / span 2;
 }
 
 // MODALS -----
@@ -237,5 +284,14 @@ $green: rgb(79, 255, 79);
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes spawn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }

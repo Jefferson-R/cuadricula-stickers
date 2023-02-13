@@ -34,7 +34,7 @@
 
       <div class="addModal addModalOut">
         <span>Añadir Stickers</span>
-        <input type="file" id="files" multiple>
+        <input type="file" id="files" accept="image/*" multiple>
         <div class="format-section">
 
           <select name="type-image" id="type-image">
@@ -43,16 +43,12 @@
           </select>
 
           <select name="normal-formats" id="formats">
-            <option value="1">1 : 1</option>
+            <option value="1" id="optional">1 : 1</option>
+            <option value="1" id="optional" class="disable">1 : 1 D</option>
+            <option value="1.1" id="optional" class="disable">1 : 1 A</option>
             <option value="2">Largo H</option>
             <option value="3">Largo V</option>
             <option value="4" id="optional">2 : 2</option>
-          </select>
-
-          <select class="disable" name="rest-formats" id="rest-formats">
-            <option value="1">1 : 1</option>
-            <option value="2">Largo H</option>
-            <option value="3">Largo V</option>
           </select>
 
         </div>
