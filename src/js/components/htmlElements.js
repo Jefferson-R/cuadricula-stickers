@@ -2,6 +2,8 @@
 export const title = document.querySelector('#title')
 export const sizeButton = document.querySelector('#sizeButton')
 export const addButton = document.querySelector('#addButton')
+export const reloadButton = document.querySelector('.reloadButton')
+export const content = document.querySelector('.content')
 
 // CONTENT
 export const sheet = document.querySelector('.sheet')
