@@ -1,6 +1,6 @@
 import { files, format, sheet, restD, restA } from "./htmlElements";
 
-export function addImagesNormal (){
+export function addImagesNormal (){ // IMAGES NORMAL
   const images = files.files;
   const classIndex = format.value - 1
   const classArray = ['sheet-image1', 'sheet-image2', 'sheet-image3', 'sheet-image4']
@@ -9,14 +9,10 @@ export function addImagesNormal (){
     img.classList.add(classArray[classIndex])
     img.src = URL.createObjectURL(images[i])
     sheet.appendChild(img);
-
-    img.addEventListener('load', function() {
-      URL.revokeObjectURL(img.src)
-    });
   }
 }
 
-export function addImagesRest (){
+export function addImagesRest (){ // IMAGES REST
   const images = files.files;
   const formatValue = format.value
 
@@ -32,10 +28,6 @@ export function addImagesRest (){
 
       img.src = URL.createObjectURL(images[i])
       restD.appendChild(img);
-  
-      img.addEventListener('load', function() {
-        URL.revokeObjectURL(img.src)
-      });
     }
   }
   if (formatValue == 1.1 || formatValue == 2){
@@ -51,20 +43,6 @@ export function addImagesRest (){
 
       img.src = URL.createObjectURL(images[i])
       restA.appendChild(img);
-  
-      img.addEventListener('load', function() {
-        URL.revokeObjectURL(img.src)
-      });
     }
   }
-  /* for (let i = 0; i < images.length; i++) {
-    const img = document.createElement('img')
-    img.classList.add(classArray[classIndex])
-    img.src = URL.createObjectURL(images[i])
-    sheet.appendChild(img);
-
-    img.addEventListener('load', function() {
-      URL.revokeObjectURL(img.src)
-    });
-  } */
 }

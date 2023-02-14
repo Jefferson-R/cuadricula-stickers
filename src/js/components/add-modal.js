@@ -1,4 +1,4 @@
-import { addModal, typeImage, optionalFormat, addFilesButton } from "./htmlElements";
+import { addModal, files, typeImage, format, optionalFormat, addFilesButton } from "./htmlElements";
 import { addImagesNormal, addImagesRest } from "./add-images";
 
 export function addModalToggleClass() {
@@ -7,19 +7,25 @@ export function addModalToggleClass() {
 }
 
 function addFilesButtonAction (){
+  if (format.value == '' || files.value == '') {
+    alert('Por favor llene todos los campos')
+    return
+  }
   if (typeImage.value == 'normal') {
     addImagesNormal()
   } else if (typeImage.value == 'rest') {
     addImagesRest()
   }
   addModalToggleClass()
+  files.value = ''
 }
 
-function selectImageFormat(event){
+function selectImageFormat(){
   optionalFormat.forEach(element => element.classList.toggle('disable'))
+  format.value = ''
 }
 
 // Event listeners
 addFilesButton.addEventListener('click', addFilesButtonAction)
 
-typeImage.addEventListener('change', event => selectImageFormat(event))
+typeImage.addEventListener('change', selectImageFormat)

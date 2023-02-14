@@ -108,24 +108,32 @@ $red: rgb(255, 70, 70);
   position: relative;
 }
 
-.sheet {
+.sheet-container {
   background-color: $white;
   z-index: 2;
   max-height: 80vh;
+  transition: all .75s;
+}
+.sheet {
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-auto-flow: dense;
   grid-auto-rows: 0px;
   grid-auto-columns: 0px;
-  transition: all .75s;
 }
-.sheet-meter {
+.sheet-container--meter {
   height: 100%;
   aspect-ratio: 2/2;
+}
+.sheet-meter {
   grid-template: repeat(16, 6fr) 4fr / repeat(16, 6fr) 4fr;
 }
-.sheet-halfmeter {
+.sheet-container--halfmeter {
   height: 50%;
   aspect-ratio: 2/1;
+}
+.sheet-halfmeter {
   grid-template: repeat(8, 6fr) 2fr / repeat(16, 6fr) 4fr;
 }
 
@@ -150,12 +158,15 @@ $red: rgb(255, 70, 70);
   grid-auto-columns: 0px;
   grid-template: 1fr / repeat(16, 6fr);
 }
-
-.sheet-image1, .sheet-image2, .sheet-image3, .sheet-image4, .sheet-image1-d, .sheet-image3-d, .sheet-image1-a, .sheet-image2-a {
-  opacity: 0%;
+.rest-i {
   width: 100%;
   height: 100%;
-  animation: spawn 1s forwards;
+  grid-area: -2 / -2 / -1 / -1;
+}
+
+.sheet-image1, .sheet-image2, .sheet-image3, .sheet-image4, .sheet-image1-d, .sheet-image3-d, .sheet-image1-a, .sheet-image2-a {
+  width: 100%;
+  height: 100%;
 }
 .sheet-image1 {
   aspect-ratio: 1 / 1;
@@ -298,14 +309,5 @@ $red: rgb(255, 70, 70);
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes spawn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
   }
 }

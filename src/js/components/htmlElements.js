@@ -6,6 +6,7 @@ export const reloadButton = document.querySelector('.reloadButton')
 export const content = document.querySelector('.content')
 
 // CONTENT
+export const sheetContainer = document.querySelector('.sheet-container')
 export const sheet = document.querySelector('.sheet')
 export const restD = document.querySelector('.rest-d')
 export const restA = document.querySelector('.rest-a')
