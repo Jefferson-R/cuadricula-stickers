@@ -1,4 +1,4 @@
-import { addModal, files, typeImage, format, optionalFormat, addFilesButton } from "./htmlElements";
+import { addModal, files, typeImage, format, optionalFormat, repeat, addFilesButton } from "./htmlElements";
 import { addImagesNormal, addImagesRest } from "./add-images";
 
 export function addModalToggleClass() {
@@ -12,12 +12,17 @@ function addFilesButtonAction (){
     return
   }
   if (typeImage.value == 'normal') {
-    addImagesNormal()
+    for (let i = 0; i < repeat.value; i++) {
+      addImagesNormal()
+    }
   } else if (typeImage.value == 'rest') {
-    addImagesRest()
+    for (let i = 0; i < repeat.value; i++) {
+      addImagesRest()
+    }
   }
   addModalToggleClass()
   files.value = ''
+  repeat.value = 1
 }
 
 function selectImageFormat(){

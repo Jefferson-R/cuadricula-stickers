@@ -275,7 +275,7 @@ $red: rgb(255, 70, 70);
 .format-section {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   select {
     text-align: center;
@@ -285,6 +285,17 @@ $red: rgb(255, 70, 70);
       font-weight: bold;
     }
   }
+}
+
+.files-repeat {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+#repeat {
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
 }
 
 .addFilesButton {
